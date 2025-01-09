@@ -33,15 +33,15 @@ app.include_router(suppliers.router, prefix="/suppliers", tags=["suppliers"])
 def read_root():
     return {"message": "Welcome to Supplier Compliance Monitor API"}
 
-@app.post("/suppliers/check-compliance/")
-async def check_compliance(record: ComplianceRecordCreate):  
-    """
-    Endpoint to check compliance for a supplier.
-    Receives compliance data and returns success message.
-    """
-    try:
-        print(f"Received compliance record: {record}")
-        # Add your actual logic to store the compliance record here
-        return {"status": "compliance check success"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+# @app.post("/suppliers/check-compliance/")
+# async def check_compliance(record: ComplianceRecordCreate):  
+#     """
+#     Endpoint to check compliance for a supplier.
+#     Receives compliance data and returns success message.
+#     """
+#     try:
+#         print(f"Received compliance record: {record}")
+#         # Add your actual logic to store the compliance record here
+#         return {"status": "compliance check success"}
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")

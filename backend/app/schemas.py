@@ -11,7 +11,7 @@ class ComplianceRecordBase(BaseModel):
 
 # Model to create a compliance record
 class ComplianceRecordCreate(ComplianceRecordBase):
-    pass
+    supplier_id: int
 
 # Model for a compliance record (with all fields from DB)
 class ComplianceRecord(ComplianceRecordBase):

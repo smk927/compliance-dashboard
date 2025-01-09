@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import SupplierList from './components/SupplierList';
 import SupplierDetail from './components/SupplierDetail';
 import ComplianceInsights from './components/ComplianceInsights';
+import CreateSupplierForm from './components/CreateSupplierForm';
 
 // Create dark theme
 const darkTheme = createTheme({
@@ -80,6 +81,7 @@ function App() {
               <Route path="/" element={<SupplierList />} />
               <Route path="/supplier/:id" element={<SupplierDetail />} />
               <Route path="/insights/:id" element={<ComplianceInsights />} />
+              <Route path="/suppliers/new" element={<CreateSupplierForm />} />
             </Routes>
           </Container>
           <Box component="footer" sx={{ 

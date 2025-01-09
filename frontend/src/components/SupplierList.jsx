@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Box, Card, CardContent, Typography, Grid, 
-  LinearProgress, Chip, IconButton 
+  LinearProgress, Chip, IconButton, Button 
 } from '@mui/material';
-import { Visibility, Insights } from '@mui/icons-material';
+import { Visibility, Insights, Add } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
 
@@ -37,9 +37,20 @@ const SupplierList = () => {
 
   return (
     <Box>
-      <Typography variant="h4" gutterBottom>
-        Suppliers Overview
-      </Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+        <Typography variant="h4">
+          Suppliers Overview
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<Add />}
+          onClick={() => navigate('/suppliers/new')}
+        >
+          Add New Supplier
+        </Button>
+      </Box>
+
       <Grid container spacing={3}>
         {suppliers.map((supplier) => (
           <Grid item xs={12} md={6} lg={4} key={supplier.id}>
