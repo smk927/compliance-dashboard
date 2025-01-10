@@ -20,7 +20,7 @@ This project is a full-stack application for managing supplier compliance data, 
 
 ### Step 1: Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/smk927/compliance-dashboard
 cd <project-directory>
 ```
 
